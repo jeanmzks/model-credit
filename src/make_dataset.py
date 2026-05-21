@@ -6,23 +6,6 @@ import numpy as np
 import os
 
 
-# Lista de Variables pre-seleccionadas
-model_features = [
-    "SEX",
-    "PAY_1",
-    "AGE",
-    "LIMIT_BAL",
-    "CV_LPAY_TOT",
-    "CV_LBILL_TOT",
-    "CANT_PAY_MAY0",
-    "BILL_AMT1",
-    "LOG_BILL_AMT1",
-    "AVG_LPAY_TOT",
-    "STD_PAY_TOT",
-    "AVG_EXP_1",
-]
-
-
 # Leemos los archivos csv
 def read_file_csv(filename):
     df = pd.read_csv(os.path.join("./data/raw/", filename)).set_index("ID")
@@ -108,6 +91,12 @@ def data_exporting(df, features, filename):
     dfp = df[features]
     dfp.to_csv(os.path.join("./data/processed/", filename))
     print(filename, "exportado correctamente en la carpeta processed")
+
+
+# Lista de Variables pre-seleccionadas
+model_features = ["SEX", "PAY_1", "AGE", "LIMIT_BAL", "CV_LPAY_TOT",
+    "CV_LBILL_TOT", "CANT_PAY_MAY0", "BILL_AMT1", "LOG_BILL_AMT1",
+    "AVG_LPAY_TOT", "STD_PAY_TOT", "AVG_EXP_1"]
 
 
 # Generamos las matrices de datos que se necesitan para la implementación

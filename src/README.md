@@ -43,17 +43,14 @@ pip install -r requirements.txt
 ### Paso 6: Ejecutar las pruebas en el entorno
 
 ```
-cd src
-
 python make_dataset.py
 
-python train.py
+python src/train.py
 
-python evaluate.py
+python src/evaluate.py
 
-python predict.py
+python src/predict.py
 
-cd ..
 ```
 
 
@@ -62,7 +59,7 @@ cd ..
 ```
 git add .
 
-git commit -m "Pruebas Finalizadas"
+git commit -m "Pruebas funcionales finalizadas"
 
 git push
 

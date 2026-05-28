@@ -12,6 +12,7 @@ def read_file_csv(filename):
     print(filename, " cargado correctamente")
     return df
 
+
 # Realizamos la transformación de datos
 def data_preparation(df):
     # Convertimos SEX en dummy
@@ -83,6 +84,7 @@ def data_preparation(df):
     ) / df["LIMIT_BAL"]
     print("Transformación de datos completa")
     return df
+
 
 # Exportamos la matriz de datos con las columnas seleccionadas
 def data_exporting(df, features, filename):

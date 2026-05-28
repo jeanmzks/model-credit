@@ -42,7 +42,7 @@ def data_preparation(df):
     df["LOG_PAY_AMT4"] = round(np.log1p(df["PAY_AMT4"]), 5)
     df["LOG_PAY_AMT5"] = round(np.log1p(df["PAY_AMT5"]), 5)
     df["LOG_PAY_AMT6"] = round(np.log1p(df["PAY_AMT6"]), 5)
-    # Generamos listas de las variables para utilizarlas en los cálculos agrupados
+    # Generamos listas de las variables para usarlas en los cálculos agrupados
     LIST_PAY = ["PAY_1", "PAY_2", "PAY_3", "PAY_4", "PAY_5", "PAY_6"]
     LIST_BILL = [
         "LOG_BILL_AMT1",
@@ -95,8 +95,9 @@ def data_exporting(df, features, filename):
 
 # Lista de Variables pre-seleccionadas
 model_features = ["SEX", "PAY_1", "AGE", "LIMIT_BAL", "CV_LPAY_TOT",
-    "CV_LBILL_TOT", "CANT_PAY_MAY0", "BILL_AMT1", "LOG_BILL_AMT1",
-    "AVG_LPAY_TOT", "STD_PAY_TOT", "AVG_EXP_1"]
+                  "CV_LBILL_TOT", "CANT_PAY_MAY0", "BILL_AMT1",
+                  "LOG_BILL_AMT1", "AVG_LPAY_TOT", "STD_PAY_TOT",
+                  "AVG_EXP_1"]
 
 
 # Generamos las matrices de datos que se necesitan para la implementación
